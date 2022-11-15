@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Not Found !</title>
+</head>
+<body>
+<h1 align="CENTER"> Data not Found For Registartion Number {{reg}} </h1>
+<div align="CENTER">
+  <form action="" method="post">
+    {% csrf_token %}
+    <a href="{{'update'}}">
+      <input type="button" value="Search For Update Again">
+    </a>
+    <a href="{{'to_home'}}">
+      <input type="button" value="Back To Home">
+    </a>
+  </form>
+</div>
+
+</body>
+</html>

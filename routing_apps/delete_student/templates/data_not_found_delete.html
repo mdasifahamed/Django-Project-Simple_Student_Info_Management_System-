@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Not Found !</title>
+</head>
+<body>
+<h1 align="CENTER">No Data is Available For {{reg}}</h1>
+<div align="center">
+    <form action="" >
+      {% csrf_token %}
+         <a href="{{ 'delete' }}">
+            <input type="button" value = "Search To Delete Another">
+        <a href="{{ 'to_home'}}">
+            <input type="button" value = "Back To Home">
+        </a>
+    </form>
+
+</div>
+
+</body>
+</html>

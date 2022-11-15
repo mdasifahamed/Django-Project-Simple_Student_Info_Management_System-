@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Delete Info </title>
+</head>
+<body>
+<form action="delete" method = 'post'>
+    {% csrf_token %}
+    <h1> Enter Student Registration Number To Delete </h1>
+    <br><br>
+    <input type="number" placeholder="Enter Registration Number " name = "inputted_reg_no">
+    <br><br>
+    <input type="submit" value = 'Search' >
+    <a href="to_home">
+        <input type="button" value="Back To Home">
+    </a>
+</form>
+
+
+</body>
+</html>

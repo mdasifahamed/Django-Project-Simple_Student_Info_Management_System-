@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body>
+
+<form action="add" method="post">
+    {% csrf_token %}
+    <h>Add Student info</h>
+    <label>Student Name: <input type="text" name = 'name'> </label>
+    <br><br>
+    <label>Birthdate : <input type="date" name = 'birthdate'> </label>
+    <br><br>
+    <label>Student Registration Number: <input type="text" name = 'reg_no'> </label>
+    <br><br>
+    <label>Student Department: <input type="text" name = 'department'> </label>
+    <br><br>
+    <label>Session : <input type="text" name = 'session'> </label>
+    <br><br>
+    <br><br>
+    <input type="Submit" value = "Add Student">
+    <a href="{{ 'to_home'}}">
+        <input type="button" value = "Back To Home">
+    </a>
+</form>
+
+
+
+
+
+
+
+</body>
+</html>

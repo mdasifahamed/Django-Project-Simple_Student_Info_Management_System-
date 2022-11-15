@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Student</title>
+</head>
+<body>
+<h1 align="center"> Success Fully Added Student Info For {{name}}</h1>
+<div align="center">
+    <form action=""  >
+      {% csrf_token %}
+         <a href="{{'add'}}">
+            <input type="button" value = "Add Another">
+        </a>
+         <a href="{{ 'to_search'}}">
+            <input type="button" value = "Search A Student">
+        </a>
+         <a href="{{'to_update'}}">
+             <input type="button" value = "Update Info">
+        </a>
+         <a href="{{'to_delete'}}">
+            <input type="button" value = "Delete Record">
+        </a>
+        <a href="{{ 'to_home'}}">
+            <input type="button" value = "Back To Home">
+        </a>
+
+
+    </form>
+
+</div>
+
+</body>
+</html>

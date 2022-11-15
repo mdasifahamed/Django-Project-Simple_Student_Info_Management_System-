@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Duplicate Data Found</title>
+</head>
+<body>
+
+<h1 align="center">There is Already a Record For Reg Number {{ reg }}</h1>
+
+<table border ='0' cellspacing='20'cellpadding ='20' align="center">
+    <tr>
+        <th>Name </th>
+        <th>BirthDate</th>
+        <th>Registration Number </th>
+        <th>Department </th>
+        <th>Seesion </th>
+    </tr>
+    {% for items in Data %}
+        <tr>
+            <td ALIGN=CENTER>{{items.name}}</td>
+            <td ALIGN=CENTER>{{items.b_date}}</td>
+            <td ALIGN=CENTER>{{items.reg_no}}</td>
+            <td ALIGN=CENTER>{{items.department}}</td>
+            <td ALIGN=CENTER>{{items.session}}</td>
+         </tr>
+    {% endfor %}
+</table>
+<div align="center">
+    <a href="{{'add'}}">
+        <input type="button" value="Add Another">
+    </a>
+    <a href="{{'to_home'}}">
+        <input type="button" value="Back To Home">
+    </a>
+</div>
+
+
+</body>
+</html>

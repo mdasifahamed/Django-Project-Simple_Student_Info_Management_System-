@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Confirm Deletion </title>
+</head>
+<body>
+  <h1 align = 'CENTER'> Data Found For Registration Number {{reg}} </h1>
+<div align="center">
+    <table align="center" cellspacing='30' cellpadding='10'>
+        <th align="LEFT">Fields</th>
+        <th>Info</th>
+        {% for x in data %}
+        <tr>
+            <td ALIGN=left>Name:</td>
+            <td ALIGN=CENTER>{{x.name}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Birthdate:</td>
+            <td ALIGN=CENTER>{{x.b_date}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Registration No :</td>
+            <td ALIGN=CENTER>{{x.reg_no}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Department:</td>
+            <td ALIGN=CENTER>{{x.department}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Session:</td>
+            <td ALIGN=CENTER>{{x.session}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+  <div align="CENTER">
+      {% for y in data %}
+
+      <form action="delete_record" method = 'post'>
+          <input type="hidden" value = "{{y.reg_no}}" name ="reg_no" >
+           <label> Are Sure To Delete Data For {{y.name}} {{y.reg_no}}
+              <a href="{{'delete_record'}}">
+                  <input type="submit" value="Yes">
+              </a>
+              <a href="{{'delete'}}">
+                  <input type="button" value="no">
+              </a>
+            </label>
+
+
+      </form>
+
+
+      {% endfor %}
+  </div >
+
+</body>
+</html>

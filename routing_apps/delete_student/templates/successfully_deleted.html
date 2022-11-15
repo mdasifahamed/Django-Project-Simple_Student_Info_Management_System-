@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Successfully Deleted</title>
+</head>
+<body>
+<h1 align="CENTER">Succeess Fully Deleted The Record</h1>
+<div align="center">
+    <form action=""  >
+      {% csrf_token %}
+         <a href="{{'delete'}}">
+            <input type="button" value = "Delete Another">
+        </a>
+         <a href="{{ 'to_add'}}">
+            <input type="button" value = "Add A Student">
+        </a>
+         <a href="{{'to_update'}}">
+             <input type="button" value = "Update Info">
+        </a>
+         <a href="{{'to_search'}}">
+            <input type="button" value = "Search A Student">
+        </a>
+        <a href="{{ 'to_home'}}">
+            <input type="button" value = "Back To Home">
+        </a>
+    </form>
+
+</div>
+
+</body>
+</html>

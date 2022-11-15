@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Update Student</title>
+</head>
+<body>
+<h1>Update Studen Info For Registration Number {{reg}}</h1>
+
+<form action="update_record" method="post">
+    {% csrf_token %}
+    {% for item in data %}
+
+    <h>Add Student info</h>
+    <label>Student Name: <input type="text" name = 'name' value = "{{ item.name }}"> </label>
+    <br><br>
+    <label>Birthdate : <input type="date" name = 'birthdate' value = "{{ item.b_date }}"> </label>
+    <br><br>
+    <label>Student Registration Number: <input type="text" name = 'reg_no' value = "{{ item.reg_no }}"> </label>
+    <br><br>
+    <label>Student Department: <input type="text" name = 'department' value = "{{ item.department }}"> </label>
+    <br><br>
+    <label>Session : <input type="text" name = 'session' value = "{{item.session}}"> </label>
+    <br><br>
+    <br><br>
+    {% endfor %}
+    <input type="submit" value="Update Now">
+    <a href="{{'to_home'}}">
+        <input type="button" value="Cancel And Back to Home">
+    </a>
+</form>
+
+
+</body>
+</html>

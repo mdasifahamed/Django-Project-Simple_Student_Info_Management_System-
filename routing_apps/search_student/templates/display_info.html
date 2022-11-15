@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Data Found</title>
+</head>
+<body>
+<h1 align="CENTER">Info Registartion Number {{reg}} </h1>
+<div align="center">
+    <table align="center" cellspacing='30' cellpadding='10'>
+        <th align="LEFT">Fields</th>
+        <th>Info</th>
+        {% for x in data %}
+        <tr>
+            <td ALIGN=left>Name:</td>
+            <td ALIGN=CENTER>{{x.name}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Birthdate:</td>
+            <td ALIGN=CENTER>{{x.b_date}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Registration No :</td>
+            <td ALIGN=CENTER>{{x.reg_no}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Department:</td>
+            <td ALIGN=CENTER>{{x.department}}</td>
+        </tr>
+        <tr>
+            <td ALIGN=left>Session:</td>
+            <td ALIGN=CENTER>{{x.session}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+</div>
+<div align="center">
+    <form action=""  >
+      {% csrf_token %}
+         <a href="{{'search'}}">
+            <input type="button" value = "Search Another">
+        </a>
+         <a href="{{ 'to_add'}}">
+            <input type="button" value = "Add A Student">
+        </a>
+         <a href="{{'to_update'}}">
+             <input type="button" value = "Update Info">
+        </a>
+         <a href="{{'to_delete'}}">
+            <input type="button" value = "Delete Record">
+        </a>
+        <a href="{{ 'to_home'}}">
+            <input type="button" value = "Back To Home">
+        </a>
+    </form>
+
+</div>
+</body>
+</html>
