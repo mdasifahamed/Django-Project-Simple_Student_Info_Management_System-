@@ -1,0 +1,1 @@
+# Django-Project-Simple_Student_Info_Management_System-
