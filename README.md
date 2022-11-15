@@ -1,4 +1,4 @@
-# Run The The Programe Follow
+#To Run The Programe Follow Below Steps
 
 1. Download The Folder
 2. Create Virtual Environment Of Python In a Folder
