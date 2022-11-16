@@ -18,7 +18,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include(('home.urls','home'),namespace='home')),
+    path('', include(('home.urls','home'),namespace='home')),#here include(('home.urls','home'),namespace='home') homme .url is the name of the file urls inside home folder and namespace = "home" is also the name of the app folder name and this should be liek this for all 
     path('add_member/',include(('add_member.urls','add_member'),namespace='add_member')),
     path('search_student/',include(('search_student.urls','search_student'),namespace='search_student')),
     path('update_student/',include(('update_student.urls','update_student'),namespace ='update_student')),
